@@ -3,7 +3,7 @@ import pandas as pd
 
 from data_loader import (
     load_infrastructure,
-    load_cyclone
+    load_cyclone_data
 )
 
 from risk_engine import calculate_risk
@@ -25,8 +25,7 @@ st.subheader(
 
 # Load data
 infrastructure = load_infrastructure()
-cyclone = load_cyclone().iloc[0]
-
+cyclone = load_cyclone_data().iloc[0]
 
 st.sidebar.header("Cyclone Information")
 
